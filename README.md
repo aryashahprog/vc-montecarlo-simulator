@@ -163,7 +163,7 @@ shinyApp(ui, server
 Arya Shah
 Georgia Tech – Business Administration (Finance / FinTech).
 
-Lets connect: linkedin.com/in/aryashahcy
+Lets connect 👉 [linkedin.com/in/aryashahcy](https://www.linkedin.com/in/aryashahcy/)
 
 ---
 
