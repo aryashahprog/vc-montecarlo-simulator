@@ -5,7 +5,7 @@ This project explores how portfolio construction, reserve strategy, and outcome 
 
 ---
 
-# What This Project Does
+## What This Project Does
 - Simulates thousands of synthetic VC funds
 - Models:
   - Initial investments
@@ -23,7 +23,7 @@ This project explores how portfolio construction, reserve strategy, and outcome 
 
 ---
 
-# Example Outputs
+## Example Outputs
 - Net LP MOIC Distribution
 - Survival probability curve
 - Strategy comparisons
@@ -31,7 +31,7 @@ This project explores how portfolio construction, reserve strategy, and outcome 
 
 ---
 
-# Why I Built This
+## Why I Built This
 I’m interested in Venture Capital and FinTech.  
 This project helped me understand:
 - Why portfolio size matters
@@ -42,7 +42,7 @@ This project helped me understand:
 
 ---
 
-## 🛠️ Tech
+## Tech
 - R
 - ggplot2
 - dplyr
@@ -51,7 +51,7 @@ This project helped me understand:
 
 ---
 
-# Next Steps
+## Next Steps
 - Deploy as an interactive Shiny App
 - Allow user-configurable inputs
 - Add lognormal and Pareto return modes
