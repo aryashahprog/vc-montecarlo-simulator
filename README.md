@@ -1,61 +1,64 @@
 # VC Monte Carlo Simulator
 
-A quantitative simulation tool that models venture capital fund outcomes using Monte Carlo methods.  
-This project explores how portfolio construction, reserve strategy, and outcome distributions affect LP returns, MOIC, IRR, and J-curve behavior.
+A Monte Carlo simulation engine for modeling venture capital fund outcomes.  
+This tool simulates portfolio construction, reserve strategies, follow-on behavior, and exit distributions to help understand LP net returns, MOIC distributions, and the classic VC J-Curve.
 
 ---
 
-## What This Project Does
-- Simulates thousands of synthetic VC funds
-- Models:
-  - Initial investments
-  - Follow–on strategy (e.g. top quartile strategy)
-  - Fund cash flow timing
-  - Management fees
-  - Carry
-  - LP net returns
-- Produces:
-  - Net + Gross MOIC distribution
-  - Net + Gross IRR distribution
-  - Probability of ≥3x outcomes
-  - Full VC J-Curve visualization
-  - Strategy comparison across different portfolio sizes
+## Interactive Shiny App
+
+Try the live simulation dashboard here:  
+👉 https://aryashah.shinyapps.io/vcmontecarlosim/
 
 ---
 
-## Example Outputs
-- Net LP MOIC Distribution
-- Survival probability curve
-- Strategy comparisons
-- VC J-Curve fan chart
+## Key Visualizations
+
+### Net LP MOIC Distribution (Base R)
+Shows simulated distribution of LP net returns across 3,000 Monte Carlo simulations.
+
+<img src="images/moic_histogram_base.png" width="700">
 
 ---
 
-## Why I Built This
-I’m interested in Venture Capital and FinTech.  
-This project helped me understand:
-- Why portfolio size matters
-- Why VC returns are power-law driven
-- The risk of capital write-offs
-- Why J-curves exist
-- How follow-on strategy impacts returns
+### Net LP MOIC Distribution (Smoothed — ggplot2)
+Adds density smoothing to visualize right-tail behavior and multimodal structure.
+
+<img src="images/moic_density_ggplot.png" width="700">
 
 ---
 
-## Tech
-- R
-- ggplot2
-- dplyr
-- Monte Carlo Simulation
-- (coming soon) Shiny App UI
+### VC Fund J-Curve (LP Net Cash Flows)
+Median + quantile confidence bands across 1,000 simulated funds.
+
+<img src="images/jcurve.png" width="700">
 
 ---
 
-## Next Steps
-- Deploy as an interactive Shiny App
-- Allow user-configurable inputs
-- Add lognormal and Pareto return modes
-- Benchmark vs real-world VC data
+## What This Project Explores
+
+✔️ How portfolio size affects return distribution  
+✔️ The impact of reserve strategy (40% allocated to follow-ons here)  
+✔️ Top-quartile follow-on strategy dynamics  
+✔️ Skew and right-tail risk in VC  
+✔️ LP experience through the J-Curve
+
+---
+
+## Tech Stack
+
+- **R**
+- **Shiny**
+- **ggplot2 / dplyr**
+- **Monte Carlo simulation**
+
+---
+
+## Author
+
+Arya Shah  
+Georgia Tech — Business Administration (Finance / FinTech)  
+Linkedin: linkedin.com/in/aryashahcy
 
 ---
 
