@@ -163,6 +163,7 @@ shinyApp(ui, server
 Arya Shah
 Georgia Tech – Business Administration (Finance / FinTech)
 Interests: Fintech • Venture Capital • Data-Driven Investing
+---
 GitHub: @aryashahprog
 LinkedIn: linkedin.com/in/aryashahcy
 
