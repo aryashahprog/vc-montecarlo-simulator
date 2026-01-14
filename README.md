@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/aryashahprog/vc-montecarlo-simulator)](https://github.com/aryashahprog/vc-montecarlo-simulator/commits/main)
 
-A Monte Carlo engine for simulating **venture capital fund performance** — including **MOIC distributions, IRR outcomes, follow-on strategies, and LP J-curve cash flows** — with an interactive **Shiny dashboard**.
+A Monte Carlo simulation engine for analyzing venture capital fund performance, including MOIC distributions, IRR outcomes, follow-on behavior, and LP J-curve cash flows, with an interactive Shiny dashboard.
 
 ---
 
@@ -27,6 +27,19 @@ All of this is exposed through a **Shiny app** so you can play with parameters i
 
 ---
 
+## Methodology: Benchmark-Calibrated Exits  <!-- NEW -->
+
+Rather than drawing exits from a single synthetic distribution, each portfolio company is simulated **independently** using a benchmark-calibrated process:
+
+- **Power-law exit outcomes** (many failures, few large winners)  
+- **Right-skewed time-to-exit** reflecting realistic venture liquidity timing  
+- **Conditional follow-on decisions** based on early performance  
+
+Exit assumptions are implemented in a dedicated calibration layer (`Rdata_calibration.R`) and wired directly into the core fund simulator.  
+This separation keeps **fund mechanics** and **exit dynamics** modular and transparent.
+
+---
+
 ## 📌 Results TL;DR
 
 In a baseline configuration:
@@ -34,14 +47,13 @@ In a baseline configuration:
 - Fund size: **$50M**
 - 30 initial portfolio companies  
 - 40% of capital reserved for follow-ons  
-- Simple power-law style outcome distribution  
-- Follow-ons allocated to “top quartile” deals
+- Benchmark-calibrated power-law exit dynamics  
 
 The simulator typically shows:
 
-- **Net LP MOIC** clustering around ~**3x**, with a long right tail  
-- **Probability of ≥ 3x net MOIC** ≈ **55–60%** in this scenario  
-- A clear **J-curve** where LPs are negative for the first few years before distributions start to dominate
+- **Median net LP MOIC** around **~1.8–2.2x**, with a long right tail  
+- Significant dispersion across fund outcomes driven by a small number of outliers  
+- A clear **J-curve** where LPs are negative for the first few years before distributions dominate  
 
 These are **illustrative only** – not investment advice or a forecast – but they make the trade-offs around **portfolio size, reserves, and follow-ons** much more concrete.
 
