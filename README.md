@@ -1,4 +1,4 @@
-# VC Monte Carlo Simulator
+# Monte Carlo Portfolio Simulator
 
 [![Made with R](https://img.shields.io/badge/Made%20with-R-276DC3?logo=r&logoColor=white)](https://www.r-project.org/)
 [![Shiny App](https://img.shields.io/badge/Live%20App-Shiny-FF3C66?logo=rstudio&logoColor=white)](https://aryashah.shinyapps.io/vcmontecarlosim/)
